@@ -596,7 +596,7 @@ namespace BookStoreRepository.Books
                 throw new Exception();
             }
         }
-    
+
 
         public void SaveToCartHistory(IEnumerable<CartDetails> cartDetails, int accountID, string orderID)
         {
@@ -613,7 +613,7 @@ namespace BookStoreRepository.Books
                 command.Parameters.Add("@OrderID", SqlDbType.VarChar);
                 connection.Open();
                 foreach (var book in cartDetails)
-                 {
+                {
                     command.Parameters[0].Value = accountID;
                     command.Parameters[1].Value = book.BookID;
                     command.Parameters[2].Value = book.Price;
@@ -632,6 +632,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
+
 
         public async Task<IEnumerable<Book>> GetCartHistory(int userID)
         {
@@ -671,6 +672,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
+    
 
         public MessageQueue MsmqService()
         {
