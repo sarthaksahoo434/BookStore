@@ -56,7 +56,7 @@ namespace BookStoreRepository.User
                 connection.Close();
             }
         }
-    
+
 
         public async Task<UserDetails> AddUser(UserDetails user)
         {
@@ -92,6 +92,7 @@ namespace BookStoreRepository.User
                 connection.Close();
             }
         }
+    
 
         public async Task<UserDetails> GetUser(int userID)
         {
