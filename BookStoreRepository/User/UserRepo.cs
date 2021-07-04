@@ -56,6 +56,7 @@ namespace BookStoreRepository.User
                 connection.Close();
             }
         }
+    
 
         public async Task<UserDetails> AddUser(UserDetails user)
         {
