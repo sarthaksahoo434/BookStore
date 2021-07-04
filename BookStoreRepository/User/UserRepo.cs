@@ -92,7 +92,7 @@ namespace BookStoreRepository.User
                 connection.Close();
             }
         }
-    
+
 
         public async Task<UserDetails> GetUser(int userID)
         {
@@ -144,7 +144,7 @@ namespace BookStoreRepository.User
                     command.Parameters.AddWithValue("AccountID", userID);
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
-                    while(reader.Read())
+                    while (reader.Read())
                     {
                         string address = reader["Address"].ToString();
                         addressList.Add(address);
@@ -192,6 +192,7 @@ namespace BookStoreRepository.User
                 connection.Close();
             }
         }
+    
 
         public string GenerateJWTtokens(string userEmail, int Id)
         {
