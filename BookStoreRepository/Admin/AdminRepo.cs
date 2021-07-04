@@ -36,7 +36,7 @@ namespace BookStoreRepository.Admin
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader != null)
                     {
-                        string jwt =this.GenerateJWTtokens(login.Email);
+                        string jwt = this.GenerateJWTtokens(login.Email);
                         connection.Close();
                         return await Task.Run(() => jwt);
                     }
@@ -53,7 +53,7 @@ namespace BookStoreRepository.Admin
                 connection.Close();
             }
         }
-
+    
 
 
         public string GenerateJWTtokens(string adminEmail)
