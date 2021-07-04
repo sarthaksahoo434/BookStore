@@ -408,7 +408,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
-    
+
 
 
         public async Task<IEnumerable<CartDetails>> GetCart(int AccountID)
@@ -460,6 +460,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
+    
 
         public async Task<IEnumerable<CartDetails>> GetWishList(int AccountID)
         {
