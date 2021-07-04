@@ -202,7 +202,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
-    
+
 
         public async Task<int> DecreaseFromCart(int AccountID, int BookID)
         {
@@ -235,6 +235,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
+    
 
         public async Task<int> DeleteFromCart(int AccountID, int BookID)
         {
