@@ -268,7 +268,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
-    
+
 
         public async Task<int> DeleteFromWishlist(int AccountID, int BookID)
         {
