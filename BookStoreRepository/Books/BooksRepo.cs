@@ -511,7 +511,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
-    
+
         public async Task<int> WishToCart(int AccountID, int BookID)
         {
             string conn = this.ConnectionString();
@@ -549,7 +549,7 @@ namespace BookStoreRepository.Books
             SqlConnection connection = new SqlConnection(conn);
             try
             {
-                foreach(var a in cartDetails)
+                foreach (var a in cartDetails)
                 {
                     using (SqlCommand command = new SqlCommand("spUpdateBooksQuantity", connection))
                     {
@@ -585,7 +585,7 @@ namespace BookStoreRepository.Books
                 {
                     sortedBooks = booksList.OrderBy(c => c.Price);
                 }
-                if(sortOrder.Equals("HighToLow"))
+                if (sortOrder.Equals("HighToLow"))
                 {
                     sortedBooks = booksList.OrderByDescending(c => c.Price);
                 }
@@ -596,6 +596,7 @@ namespace BookStoreRepository.Books
                 throw new Exception();
             }
         }
+    
 
         public void SaveToCartHistory(IEnumerable<CartDetails> cartDetails, int accountID, string orderID)
         {
