@@ -333,7 +333,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
-    
+
 
         public async Task<string> PlaceOrder(int AccountID)
         {
@@ -384,10 +384,10 @@ namespace BookStoreRepository.Books
                             {
                                 email = orders.Email;
                                 body += "Book Name: " + orders.BookName
-                                    + "\nBook Author: "+ orders.Author
-                                    + "\nBook Price: "+ orders.Price
-                                    + "\nTotal Price: (Rs." + orders.Price +"*" + orders.Quantity + 
-                                    ") = " + orders.TotalPrice +"\n---------------------------------\n";
+                                    + "\nBook Author: " + orders.Author
+                                    + "\nBook Price: " + orders.Price
+                                    + "\nTotal Price: (Rs." + orders.Price + "*" + orders.Quantity +
+                                    ") = " + orders.TotalPrice + "\n---------------------------------\n";
                                 grandTotal += orders.TotalPrice;
                             }
                             body += "Grand Amount = " + grandTotal;
@@ -408,6 +408,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
+    
 
 
         public async Task<IEnumerable<CartDetails>> GetCart(int AccountID)
