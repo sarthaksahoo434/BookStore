@@ -171,6 +171,7 @@ namespace BookStoreBackEnd.Controllers
             {
                 return this.BadRequest(new { Status = false, Message = "Exception", Data = e });
             }
+        
         }
 
         [Authorize(Roles = "User")]
