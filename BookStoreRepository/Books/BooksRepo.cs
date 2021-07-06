@@ -672,7 +672,7 @@ namespace BookStoreRepository.Books
                 connection.Close();
             }
         }
-    
+
 
         public MessageQueue MsmqService()
         {
@@ -733,6 +733,7 @@ namespace BookStoreRepository.Books
 
             this.messageQueue.Close();
         }
+    
 
         public void ReceiveFromQueue(object sender, ReceiveCompletedEventArgs e)
         {
